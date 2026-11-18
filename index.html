@@ -691,7 +691,7 @@
       category: '房地產',
       imgId: '1izaaTX1jmV5oLheD8mQCP9AiSUQ6Tp2x',
       desc: '「眼光是未來的窗。」以詩意的視角詮釋高雄亞洲新灣區豪宅。系列廣告打破建案訴求的制式框架，以哲學性文案建構品牌精神，讓建築不只是居所，更是一種生命態度。操作全案文案策略，涵蓋報紙全版、旗艦廣告牌及銷售中心陳設。',
-      link: 'https://drive.google.com/drive/folders/0B1KFG_gazEiCSUdhVGp3ZzVZZ3c'
+      link: 'https://drive.google.com/drive/folders/0B1KFG_gazEiCSUdhVGp3ZzVZZ3c?resourcekey=0-XDJjRRFurEz6_iZzBzIsZA'
     },
 
     // ── 平面 / 汽車 ───────────────────────────────
@@ -700,9 +700,9 @@
       brand: 'SUBARU Forester',
       title: '品牌形象系列廣告',
       category: '汽車',
-      imgId: '0B1KFG_gazEiCak9Gbkp6SU51ejQ',
+      imgId: '0B1KFG_gazEiCak9Gbkp6SU51ejQ', resourceKey: '0-scVLQ_IDLIMl-ar2IdGhkQ',
       desc: '以「血液」、「車距」等感性隱喻，重新定義 SUBARU 的品牌個性。強調冒險 DNA，讓每一張廣告都成為自由探索的宣言。',
-      link: 'https://drive.google.com/file/d/0B1KFG_gazEiCak9Gbkp6SU51ejQ/view'
+      link: 'https://drive.google.com/file/d/0B1KFG_gazEiCak9Gbkp6SU51ejQ/view?resourcekey=0-scVLQ_IDLIMl-ar2IdGhkQ'
     },
     // ── 平面 / 美妝 ───────────────────────────────
     {
@@ -759,9 +759,9 @@
       brand: '牛爾 NARUKO',
       title: '白玉蘭保濕系列 平面廣告',
       category: '美妝保養',
-      imgId: '0B1KFG_gazEiCX0FCUktsX240LVE',
+      imgId: '0B1KFG_gazEiCX0FCUktsX240LVE', resourceKey: '0-AponpVui0J3JWVG9efuyzA',
       desc: '以「玉蘭花」天然植萃精神貫穿整個系列廣告，融合柔美東方美學視覺語言，詮釋牛爾 NARUKO 白玉蘭全系列——從乳液到精華，展現品牌一貫的自然美肌主張。',
-      link: 'https://drive.google.com/file/d/0B1KFG_gazEiCX0FCUktsX240LVE/view'
+      link: 'https://drive.google.com/file/d/0B1KFG_gazEiCX0FCUktsX240LVE/view?resourcekey=0-AponpVui0J3JWVG9efuyzA'
     },
 
     // ── 平面 / 其他 ───────────────────────────────
@@ -770,9 +770,9 @@
       brand: '痞客邦 PIXNET',
       title: '出路篇 品牌形象廣告',
       category: '數位平台',
-      imgId: '0B1KFG_gazEiCZEM4S0tXbEh3ZDA',
+      imgId: '0B1KFG_gazEiCZEM4S0tXbEh3ZDA', resourceKey: '0-FhLGjAaaIYrGVMzqudQNFw',
       desc: '在數位媒體快速崛起的時代，以「出路」為核心創意，鼓勵每一位創作者勇於表達自我。廣告傳遞平台的人文溫度，建立情感認同。',
-      link: 'https://drive.google.com/file/d/0B1KFG_gazEiCZEM4S0tXbEh3ZDA/view'
+      link: 'https://drive.google.com/file/d/0B1KFG_gazEiCZEM4S0tXbEh3ZDA/view?resourcekey=0-FhLGjAaaIYrGVMzqudQNFw'
     },
 
     // ── TVC ───────────────────────────────────────
@@ -977,9 +977,9 @@
       brand: '中華賓士 F1 直播活動',
       title: '品牌體驗活動整合規劃',
       category: '汽車',
-      imgId: '0B1KFG_gazEiCcDlqV1R6S0JTajg',
+      imgId: '0B1KFG_gazEiCcDlqV1R6S0JTajg', resourceKey: '0-CPES6VAFKktJRytcFZz62g',
       desc: '為中華賓士策劃的 Formula 1 台灣直播活動整合方案。從視覺識別設計到現場體驗規劃，全面呼應賓士品牌的高端運動精神，創造消費者難忘的品牌沉浸體驗。活動串聯線上線下，有效強化賓士在台灣頂級消費族群中的品牌認知。',
-      link: 'https://drive.google.com/drive/folders/0B1KFG_gazEiCVm5SZlVJYS1vcHM'
+      link: 'https://drive.google.com/drive/folders/0B1KFG_gazEiCVm5SZlVJYS1vcHM?resourcekey=0-xdYrF1lKUAIKbWAoZkbaVQ'
     },
   ];
 
@@ -1037,7 +1037,7 @@
           </a>
         </div>`;
     } else if (work.imgId) {
-      const imgSrc = 'https://drive.google.com/thumbnail?id=' + work.imgId + '&sz=w800';
+      const imgSrc = 'https://drive.google.com/thumbnail?id=' + work.imgId + '&sz=w800' + (work.resourceKey ? '&resourcekey=' + work.resourceKey : '');
       const printBg = gradients[work.gradientClass] || 'linear-gradient(135deg, #111 0%, #1a1a1a 100%)';
       const printFallback = 'this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'';
       thumbHtml = `
