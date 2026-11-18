@@ -1020,7 +1020,12 @@
         var m = work.videoUrl.match(/[?&]v=([A-Za-z0-9_-]{11})/);
         if (m) ytId = m[1];
       }
-      const thumbSrc = (ytId && ytId.length <= 12) ? 'https://img.youtube.com/vi/' + ytId + '/hqdefault.jpg' : '';
+      var driveId = '';
+       if (!ytId && work.videoUrl && work.videoUrl.indexOf('drive.google.com/file/d/') !== -1) {
+         driveId = work.videoUrl.split('/file/d/')[1].split('/')[0].split('?')[0];
+       }
+       const thumbSrc = (ytId && ytId.length <= 12) ? 'https://img.youtube.com/vi/' + ytId + '/hqdefault.jpg'
+         : (driveId ? 'https://drive.google.com/thumbnail?id=' + driveId + '&sz=w800' : '');
       const thumbImg = thumbSrc ? '<img src="' + thumbSrc + '" alt="' + work.brand + '" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">' : '';
       const phStyle = 'background:' + bg + (thumbSrc ? ';display:none' : '');
       thumbHtml = `
