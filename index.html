@@ -1,0 +1,1154 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Warren · 點題創意 | Creative Director Portfolio</title>
+  <meta name="description" content="Warren — 資深廣告創意總監作品集。深耕廣告創意逾二十年，服務品牌橫跨汽車、美妝、電信、金融等各大領域。">
+  <meta property="og:title" content="Warren · 點題創意 | Creative Director Portfolio">
+  <meta property="og:description" content="深耕廣告創意逾二十年，讓每個品牌的故事精準入心。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Noto+Serif+TC:wght@300;400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <!--
+  ============================================================
+  ⚠️ 關於圖片 URL：
+  作品縮圖使用 Google Drive 公開連結格式：
+    https://drive.google.com/thumbnail?id=FILE_ID&sz=w800
+  請至 Google Drive，對每個圖片檔案按右鍵 → 共用 →
+  「知道連結的任何人」或「公開」，圖片才會正確顯示。
+  ============================================================
+  -->
+
+  <style>
+    /* ===== 全域設定 ===== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #090909;
+      --bg-card: #111111;
+      --bg-hover: #1a1a1a;
+      --text: #f0ece4;
+      --text-muted: #8a8480;
+      --gold: #C9A44C;
+      --gold-light: #E2C07A;
+      --blue: #4A90D9;
+      --red: #E05A5A;
+      --green: #5ABE8A;
+      --border: #232323;
+      --border-light: #2e2e2e;
+      --nav-h: 68px;
+      --font-en: 'Playfair Display', 'Georgia', serif;
+      --font-en-sans: 'Plus Jakarta Sans', 'Helvetica Neue', sans-serif;
+      --font-zh: 'Noto Serif TC', 'Georgia', serif;
+      --font-zh-sans: 'Noto Sans TC', 'PingFang TC', sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-zh-sans);
+      font-weight: 300;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* ===== 捲軸 ===== */
+    ::-webkit-scrollbar { width: 4px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 2px; }
+
+    /* ===== 選取色 ===== */
+    ::selection { background: var(--gold); color: #000; }
+
+    /* ===== 連結 ===== */
+    a { color: inherit; text-decoration: none; }
+
+    /* ===== 導覽列 ===== */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 999;
+      height: var(--nav-h);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 5vw;
+      background: rgba(9,9,9,0.0);
+      backdrop-filter: blur(0px);
+      border-bottom: 1px solid transparent;
+      transition: background 0.4s, backdrop-filter 0.4s, border-color 0.4s;
+    }
+    nav.scrolled {
+      background: rgba(9,9,9,0.88);
+      backdrop-filter: blur(20px);
+      border-color: var(--border);
+    }
+    .nav-logo {
+      font-family: var(--font-zh); font-size: 1.05rem;
+      letter-spacing: 0.08em; color: var(--gold);
+    }
+    .nav-logo span { color: var(--text); font-size: 0.8em; margin-left: 8px; }
+    .nav-links { display: flex; gap: 2.5rem; }
+    .nav-links a {
+      font-family: var(--font-en-sans); font-size: 0.78rem;
+      font-weight: 500; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--text-muted);
+      transition: color 0.3s;
+    }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-cta {
+      font-family: var(--font-en-sans); font-size: 0.75rem;
+      font-weight: 600; letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 9px 22px;
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      border-radius: 2px;
+      transition: background 0.3s, color 0.3s;
+    }
+    .nav-cta:hover { background: var(--gold); color: #000; }
+    .nav-mobile-btn { display: none; cursor: pointer; }
+    .nav-mobile-btn span {
+      display: block; width: 22px; height: 1.5px;
+      background: var(--text); margin: 5px 0;
+      transition: transform 0.3s, opacity 0.3s;
+    }
+
+    /* ===== 英雄區 ===== */
+    .hero {
+      min-height: 100vh;
+      display: flex; flex-direction: column;
+      justify-content: center; align-items: flex-start;
+      padding: calc(var(--nav-h) + 4rem) 5vw 6rem;
+      position: relative; overflow: hidden;
+    }
+    .hero-bg-text {
+      position: absolute; top: 50%; right: -2vw;
+      transform: translateY(-50%);
+      font-family: var(--font-en); font-size: clamp(140px, 18vw, 260px);
+      font-weight: 700; color: transparent;
+      -webkit-text-stroke: 1px rgba(201,164,76,0.08);
+      letter-spacing: -0.04em; line-height: 1;
+      pointer-events: none; user-select: none;
+    }
+    .hero-eyebrow {
+      font-family: var(--font-en-sans); font-size: 0.72rem;
+      font-weight: 600; letter-spacing: 0.22em;
+      text-transform: uppercase; color: var(--gold);
+      margin-bottom: 2rem; opacity: 0;
+      animation: fadeUp 0.8s 0.3s forwards;
+    }
+    .hero-eyebrow::before {
+      content: ''; display: inline-block; width: 36px; height: 1px;
+      background: var(--gold); vertical-align: middle; margin-right: 12px;
+    }
+    .hero-name {
+      font-family: var(--font-en); font-size: clamp(48px, 8vw, 110px);
+      font-weight: 700; line-height: 0.95;
+      letter-spacing: -0.03em; color: var(--text);
+      opacity: 0; animation: fadeUp 0.9s 0.5s forwards;
+    }
+    .hero-name-zh {
+      font-family: var(--font-zh); font-size: clamp(20px, 3vw, 36px);
+      font-weight: 300; color: var(--gold);
+      letter-spacing: 0.25em; margin: 1.2rem 0 0.5rem;
+      opacity: 0; animation: fadeUp 0.9s 0.7s forwards;
+    }
+    .hero-title {
+      font-family: var(--font-en-sans); font-size: clamp(12px, 1.4vw, 16px);
+      font-weight: 400; letter-spacing: 0.18em;
+      text-transform: uppercase; color: var(--text-muted);
+      opacity: 0; animation: fadeUp 0.9s 0.85s forwards;
+    }
+    .hero-tagline {
+      max-width: 520px; margin-top: 2.5rem;
+      font-family: var(--font-zh); font-size: clamp(15px, 1.6vw, 18px);
+      font-weight: 300; line-height: 1.9; color: rgba(240,236,228,0.72);
+      border-left: 2px solid var(--gold); padding-left: 1.5rem;
+      opacity: 0; animation: fadeUp 0.9s 1s forwards;
+    }
+    .hero-actions {
+      display: flex; gap: 1.2rem; margin-top: 3rem;
+      opacity: 0; animation: fadeUp 0.9s 1.15s forwards;
+    }
+    .btn-primary {
+      font-family: var(--font-en-sans); font-size: 0.78rem;
+      font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;
+      padding: 14px 32px; background: var(--gold); color: #000;
+      border: none; border-radius: 2px; cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+    }
+    .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); }
+    .btn-outline {
+      font-family: var(--font-en-sans); font-size: 0.78rem;
+      font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;
+      padding: 14px 32px; background: transparent; color: var(--text);
+      border: 1px solid var(--border-light); border-radius: 2px; cursor: pointer;
+      transition: border-color 0.3s, color 0.3s, transform 0.2s;
+    }
+    .btn-outline:hover { border-color: var(--text-muted); transform: translateY(-2px); }
+    .hero-scroll {
+      position: absolute; bottom: 2.5rem; left: 5vw;
+      display: flex; align-items: center; gap: 12px;
+      font-family: var(--font-en-sans); font-size: 0.68rem;
+      letter-spacing: 0.18em; text-transform: uppercase; color: var(--text-muted);
+      opacity: 0; animation: fadeUp 0.9s 1.4s forwards;
+    }
+    .hero-scroll-line {
+      width: 40px; height: 1px; background: var(--text-muted);
+      position: relative; overflow: hidden;
+    }
+    .hero-scroll-line::after {
+      content: ''; position: absolute; top: 0; left: -100%;
+      width: 100%; height: 100%; background: var(--gold);
+      animation: scrollLine 2s 1.8s infinite;
+    }
+    .hero-stats {
+      position: absolute; bottom: 2.5rem; right: 5vw;
+      display: flex; gap: 3rem;
+      opacity: 0; animation: fadeUp 0.9s 1.2s forwards;
+    }
+    .hero-stat { text-align: center; }
+    .hero-stat-num {
+      font-family: var(--font-en); font-size: clamp(24px, 3vw, 36px);
+      font-weight: 600; color: var(--gold); line-height: 1;
+    }
+    .hero-stat-label {
+      font-family: var(--font-zh-sans); font-size: 0.65rem;
+      color: var(--text-muted); letter-spacing: 0.12em; margin-top: 4px;
+    }
+
+    /* 分隔線 */
+    .divider {
+      width: 100%; height: 1px; background: var(--border);
+      margin: 0 auto;
+    }
+
+    /* ===== 關於我 ===== */
+    #about {
+      padding: 8rem 5vw;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 5rem;
+      align-items: center; max-width: 1200px; margin: 0 auto;
+    }
+    .about-visual {
+      position: relative; aspect-ratio: 4/5;
+      overflow: hidden; border-radius: 4px;
+    }
+    .about-visual-inner {
+      width: 100%; height: 100%;
+      background: linear-gradient(135deg, #1a1712 0%, #0f0e0b 50%, #1a1410 100%);
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center; gap: 1.5rem;
+    }
+    .about-visual-mark {
+      font-family: var(--font-zh); font-size: clamp(48px, 5vw, 72px);
+      font-weight: 700; color: var(--gold); letter-spacing: 0.15em;
+      line-height: 1;
+    }
+    .about-visual-en {
+      font-family: var(--font-en); font-size: clamp(14px, 1.8vw, 20px);
+      font-style: italic; color: rgba(201,164,76,0.5);
+      letter-spacing: 0.06em;
+    }
+    .about-visual::after {
+      content: ''; position: absolute;
+      top: 16px; left: 16px; right: -16px; bottom: -16px;
+      border: 1px solid rgba(201,164,76,0.2); border-radius: 4px;
+      pointer-events: none; z-index: -1;
+    }
+    .about-content {}
+    .section-eyebrow {
+      font-family: var(--font-en-sans); font-size: 0.68rem;
+      font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 1.2rem;
+    }
+    .section-eyebrow::before {
+      content: ''; display: inline-block; width: 24px; height: 1px;
+      background: var(--gold); vertical-align: middle; margin-right: 10px;
+    }
+    .section-title {
+      font-family: var(--font-zh); font-size: clamp(26px, 3vw, 38px);
+      font-weight: 600; line-height: 1.3; margin-bottom: 2rem;
+    }
+    .about-bio {
+      font-size: clamp(14px, 1.3vw, 16px);
+      line-height: 2; color: rgba(240,236,228,0.75);
+      margin-bottom: 1.5rem;
+    }
+    .about-quote {
+      border-left: 2px solid var(--gold); padding-left: 1.5rem;
+      font-family: var(--font-zh); font-size: clamp(15px, 1.5vw, 18px);
+      font-style: italic; color: var(--gold-light); line-height: 1.8;
+      margin: 2rem 0;
+    }
+    .about-tags {
+      display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 2rem;
+    }
+    .about-tag {
+      font-family: var(--font-en-sans); font-size: 0.68rem;
+      font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase;
+      padding: 6px 14px; border: 1px solid var(--border-light);
+      color: var(--text-muted); border-radius: 2px;
+      transition: border-color 0.3s, color 0.3s;
+    }
+    .about-tag:hover { border-color: var(--gold); color: var(--gold); }
+
+    /* ===== 作品集 ===== */
+    #works {
+      padding: 6rem 5vw 8rem;
+    }
+    .works-header {
+      max-width: 1200px; margin: 0 auto 4rem;
+      display: flex; flex-wrap: wrap;
+      align-items: flex-end; justify-content: space-between;
+      gap: 2rem;
+    }
+    .works-header-left {}
+    .works-count {
+      font-family: var(--font-en-sans); font-size: 0.68rem;
+      font-weight: 500; letter-spacing: 0.12em;
+      color: var(--text-muted); margin-top: 0.5rem;
+    }
+    .filter-bar {
+      display: flex; flex-wrap: wrap; gap: 0.5rem;
+    }
+    .filter-btn {
+      font-family: var(--font-en-sans); font-size: 0.7rem;
+      font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase;
+      padding: 8px 18px; background: transparent;
+      border: 1px solid var(--border); color: var(--text-muted);
+      border-radius: 2px; cursor: pointer;
+      transition: all 0.3s;
+    }
+    .filter-btn:hover { border-color: var(--text-muted); color: var(--text); }
+    .filter-btn.active {
+      background: var(--gold); border-color: var(--gold);
+      color: #000;
+    }
+
+    .works-grid {
+      max-width: 1200px; margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    /* ===== 作品卡 ===== */
+    .work-card {
+      background: var(--bg-card);
+      border-radius: 4px; overflow: hidden;
+      border: 1px solid var(--border);
+      transition: transform 0.4s cubic-bezier(0.25,0.46,0.45,0.94),
+                  border-color 0.3s, box-shadow 0.4s;
+      cursor: pointer;
+      display: flex; flex-direction: column;
+    }
+    .work-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(201,164,76,0.35);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+    }
+    .work-card.hidden { display: none; }
+    .work-card.fade-in { animation: fadeUp 0.6s forwards; }
+
+    .card-thumb {
+      position: relative; overflow: hidden;
+      aspect-ratio: 16/10; background: #111;
+    }
+    .card-thumb img {
+      width: 100%; height: 100%; object-fit: cover;
+      transition: transform 0.6s cubic-bezier(0.25,0.46,0.45,0.94), opacity 0.4s;
+      opacity: 0.9;
+    }
+    .work-card:hover .card-thumb img { transform: scale(1.06); opacity: 1; }
+    .card-thumb-placeholder {
+      width: 100%; height: 100%;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .card-thumb-placeholder .brand-initial {
+      font-family: var(--font-en); font-size: clamp(36px, 4vw, 54px);
+      font-weight: 700; color: rgba(255,255,255,0.07); letter-spacing: -0.02em;
+    }
+    .card-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.2) 60%, transparent 100%);
+      opacity: 0; transition: opacity 0.4s;
+      display: flex; align-items: flex-end; padding: 1.5rem;
+    }
+    .work-card:hover .card-overlay { opacity: 1; }
+    .card-overlay-desc {
+      font-family: var(--font-zh-sans); font-size: 0.8rem;
+      line-height: 1.7; color: rgba(255,255,255,0.88);
+    }
+    .card-play-btn {
+      position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
+      width: 50px; height: 50px; background: rgba(0,0,0,0.6);
+      border: 1.5px solid rgba(255,255,255,0.4); border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      transition: background 0.3s, border-color 0.3s, transform 0.3s;
+    }
+    .card-play-btn svg { width: 16px; height: 16px; fill: white; margin-left: 3px; }
+    .work-card:hover .card-play-btn {
+      background: var(--gold); border-color: var(--gold);
+      transform: translate(-50%,-50%) scale(1.1);
+    }
+    .work-card:hover .card-play-btn svg { fill: #000; }
+
+    .card-body { padding: 1.3rem 1.5rem 1.5rem; flex: 1; display: flex; flex-direction: column; }
+    .card-tags { display: flex; gap: 0.4rem; margin-bottom: 0.8rem; flex-wrap: wrap; }
+    .card-tag {
+      font-family: var(--font-en-sans); font-size: 0.6rem;
+      font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+      padding: 3px 8px; border-radius: 2px;
+    }
+    .tag-print { background: rgba(201,164,76,0.12); color: var(--gold); }
+    .tag-tvc   { background: rgba(74,144,217,0.12); color: var(--blue); }
+    .tag-event { background: rgba(224,90,90,0.12);  color: var(--red); }
+    .tag-doc   { background: rgba(90,190,138,0.12); color: var(--green); }
+    .tag-category {
+      background: transparent; border: 1px solid var(--border);
+      color: var(--text-muted);
+    }
+    .card-brand {
+      font-family: var(--font-zh); font-size: clamp(15px, 1.4vw, 18px);
+      font-weight: 600; line-height: 1.3; margin-bottom: 0.4rem;
+    }
+    .card-title {
+      font-family: var(--font-zh-sans); font-size: clamp(11px, 1vw, 13px);
+      color: var(--text-muted); margin-bottom: 0.8rem;
+    }
+    .card-desc {
+      font-family: var(--font-zh-sans); font-size: clamp(11px, 1vw, 13px);
+      line-height: 1.8; color: rgba(240,236,228,0.55);
+      flex: 1;
+    }
+    .card-footer {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-top: 1.2rem; padding-top: 1rem; border-top: 1px solid var(--border);
+    }
+.card-link {
+      font-family: var(--font-en-sans); font-size: 0.65rem;
+      font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--gold); display: flex; align-items: center; gap: 6px;
+      transition: gap 0.3s;
+    }
+    .card-link:hover { gap: 10px; }
+    .card-link svg { width: 12px; height: 12px; stroke: currentColor; fill: none; }
+
+    /* ===== 精選橫幅（featured） ===== */
+    .work-card.featured {
+      grid-column: span 2;
+    }
+    .work-card.featured .card-thumb { aspect-ratio: 21/9; }
+
+    /* ===== 聯絡區 ===== */
+    #contact {
+      padding: 8rem 5vw;
+      display: flex; flex-direction: column; align-items: center;
+      text-align: center; background: linear-gradient(180deg, var(--bg) 0%, #0d0d0b 100%);
+    }
+    .contact-kicker {
+      font-family: var(--font-en); font-style: italic;
+      font-size: clamp(36px, 5vw, 64px); font-weight: 400;
+      line-height: 1.2; margin: 1.5rem 0; color: var(--text);
+    }
+    .contact-kicker em { color: var(--gold); }
+    .contact-body {
+      max-width: 500px; font-size: 15px; line-height: 1.9;
+      color: rgba(240,236,228,0.6); margin-bottom: 3rem;
+    }
+    .contact-email {
+      font-family: var(--font-en); font-size: clamp(16px, 2.2vw, 26px);
+      font-weight: 400; color: var(--gold);
+      border-bottom: 1px solid rgba(201,164,76,0.3);
+      padding-bottom: 4px; transition: border-color 0.3s;
+    }
+    .contact-email:hover { border-color: var(--gold); }
+
+    /* ===== 頁腳 ===== */
+    footer {
+      padding: 3rem 5vw;
+      border-top: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 2rem;
+    }
+    .footer-logo { font-family: var(--font-zh); font-size: 0.9rem; color: var(--text-muted); }
+    .footer-copy { font-family: var(--font-en-sans); font-size: 0.65rem; color: var(--text-muted); letter-spacing: 0.1em; }
+    .footer-tagline { font-family: var(--font-en); font-size: 0.8rem; font-style: italic; color: rgba(201,164,76,0.4); }
+
+    /* ===== 動畫 ===== */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(22px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes scrollLine {
+      0%   { left: -100%; }
+      50%  { left: 0; }
+      100% { left: 100%; }
+    }
+
+    /* ===== 滾動觸發淡入 ===== */
+    .reveal {
+      opacity: 0; transform: translateY(30px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+
+    /* ===== RWD ===== */
+    @media (max-width: 1024px) {
+      .works-grid { grid-template-columns: repeat(2, 1fr); }
+      .work-card.featured { grid-column: span 2; }
+      #about { grid-template-columns: 1fr; }
+      .about-visual { max-width: 360px; }
+    }
+    @media (max-width: 768px) {
+      .nav-links, .nav-cta { display: none; }
+      .nav-mobile-btn { display: block; }
+      .works-grid { grid-template-columns: 1fr; }
+      .work-card.featured { grid-column: span 1; }
+      .hero-stats { display: none; }
+      .works-header { flex-direction: column; align-items: flex-start; }
+      footer { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===================== 導覽列 ===================== -->
+  <nav id="navbar">
+    <div class="nav-logo">
+      點題創意
+      <span>/ Creative On Point</span>
+    </div>
+    <div class="nav-links">
+      <a href="#about">關於我</a>
+      <a href="#works">作品集</a>
+      <a href="#contact">聯絡</a>
+    </div>
+    <a href="#contact" class="nav-cta">Get In Touch</a>
+    <div class="nav-mobile-btn" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- ===================== 英雄區 ===================== -->
+  <section class="hero" id="home">
+    <div class="hero-bg-text" aria-hidden="true">CD</div>
+
+    <div class="hero-eyebrow">Creative Director &amp; Copywriter</div>
+
+    <h1 class="hero-name">Warren</h1>
+    <div class="hero-name-zh">點題創意</div>
+    <div class="hero-title">Art Direction · Copywriting · Brand Storytelling</div>
+
+    <p class="hero-tagline">
+      廣告不只是說服，更是共鳴。<br>
+      以文字洞穿人心，以創意改變品牌命運——<br>
+      二十年，一直在說最精準的那個故事。
+    </p>
+
+    <div class="hero-actions">
+      <a href="#works" class="btn-primary">探索作品</a>
+      <a href="#about" class="btn-outline">關於我</a>
+    </div>
+
+    <div class="hero-scroll">
+      <div class="hero-scroll-line"></div>
+      Scroll
+    </div>
+
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <div class="hero-stat-num">20+</div>
+        <div class="hero-stat-label">年廣告資歷</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">30+</div>
+        <div class="hero-stat-label">服務品牌</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">200+</div>
+        <div class="hero-stat-label">平面 / 影音作品</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ===================== 關於我 ===================== -->
+  <section id="about">
+    <div class="about-visual reveal">
+      <div class="about-visual-inner">
+        <div class="about-visual-mark">點<br>題<br>創<br>意</div>
+        <div class="about-visual-en">Creative On Point</div>
+      </div>
+    </div>
+
+    <div class="about-content">
+      <div class="section-eyebrow reveal">About</div>
+      <h2 class="section-title reveal reveal-delay-1">
+        讓每個品牌故事<br>精準入心
+      </h2>
+
+      <div class="about-quote reveal reveal-delay-2">
+        「廣告是一門說真話的藝術——<br>說得好，讓人感動；說得準，讓人行動。」
+      </div>
+
+      <p class="about-bio reveal reveal-delay-2">
+        深耕廣告創意逾二十年，歷任廣告公司文案、創意總監，
+        服務品牌橫跨汽車、美妝、電信、金融、飲料、房地產等各大產業。
+        操作過台灣市場最受矚目的整合行銷案，從平面、電視廣告到活動企劃，
+        創作足跡遍及台灣與大陸市場。
+      </p>
+      <p class="about-bio reveal reveal-delay-2">
+        相信好的廣告是策略與感性的完美交織——一個精準的標題，
+        可以讓品牌從人群中脫穎而出；一支動人的電視廣告，
+        可以讓消費者與品牌產生長達一輩子的情感連結。
+        每一個作品，都是一次品牌與消費者心智的深度對話。
+      </p>
+
+      <div class="about-tags reveal reveal-delay-3">
+        <span class="about-tag">Copywriting</span>
+        <span class="about-tag">Creative Direction</span>
+        <span class="about-tag">Brand Strategy</span>
+        <span class="about-tag">TV Commercials</span>
+        <span class="about-tag">Print Advertising</span>
+        <span class="about-tag">Real Estate Marketing</span>
+        <span class="about-tag">Integrated Campaigns</span>
+        <span class="about-tag">Event Marketing</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ===================== 作品集 ===================== -->
+  <section id="works">
+    <div class="works-header">
+      <div class="works-header-left reveal">
+        <div class="section-eyebrow">Selected Works</div>
+        <h2 class="section-title" style="margin-bottom:0">精選作品集</h2>
+        <div class="works-count" id="works-count">顯示 — 件作品</div>
+      </div>
+      <div class="filter-bar reveal reveal-delay-1">
+        <button class="filter-btn active" data-filter="all">全部 ALL</button>
+        <button class="filter-btn" data-filter="print">平面廣告 Print</button>
+        <button class="filter-btn" data-filter="tvc">電視廣告 TVC</button>
+        <button class="filter-btn" data-filter="event">活動企劃 Event</button>
+        <button class="filter-btn" data-filter="documentary">紀錄片 Doc</button>
+      </div>
+    </div>
+
+    <div class="works-grid" id="works-grid">
+      <!-- JS 動態生成 -->
+    </div>
+  </section>
+
+  <!-- ===================== 聯絡區 ===================== -->
+  <section id="contact">
+    <div class="section-eyebrow reveal">Contact</div>
+    <h2 class="contact-kicker reveal reveal-delay-1">
+      Let's create something<br><em>unforgettable.</em>
+    </h2>
+    <p class="contact-body reveal reveal-delay-2">
+      如果您正在尋找一位能以精準文字與創意策略，
+      讓品牌故事深入人心的創意夥伴，
+      歡迎與我聯繫。
+    </p>
+    <a href="mailto:warrenwrc@gmail.com" class="contact-email reveal reveal-delay-3">
+      warrenwrc@gmail.com
+    </a>
+  </section>
+
+  <!-- ===================== 頁腳 ===================== -->
+  <footer>
+    <div class="footer-logo">點題創意 · Warren</div>
+    <div class="footer-tagline">
+      "The best advertising doesn't feel like advertising."
+    </div>
+    <div class="footer-copy">© 2025 Warren · 點題創意. All rights reserved.</div>
+  </footer>
+
+  <!-- ===================== JavaScript ===================== -->
+  <script>
+  // ─── 作品資料 ────────────────────────────────────────────
+  // imgId: Google Drive 檔案 ID（需將檔案共用為「知道連結者皆可」才能顯示）
+  // videoUrl: Google Drive 檢視連結（TVC 類）
+  // type: 'print' | 'tvc' | 'event'
+  // featured: true = 橫版大卡（兩欄寬）
+
+  const works = [
+
+    // ── 精選 / 房地產 ────────────────────────────
+    {
+      type: 'print',
+      featured: true,
+      brand: '國城賦格 豪宅建案系列',
+      title: '高雄亞洲新灣區 系列平面廣告',
+      category: '房地產',
+      imgId: '1izaaTX1jmV5oLheD8mQCP9AiSUQ6Tp2x',
+      desc: '「眼光是未來的窗。」以詩意的視角詮釋高雄亞洲新灣區豪宅。系列廣告打破建案訴求的制式框架，以哲學性文案建構品牌精神，讓建築不只是居所，更是一種生命態度。操作全案文案策略，涵蓋報紙全版、旗艦廣告牌及銷售中心陳設。',
+      link: 'https://drive.google.com/drive/folders/0B1KFG_gazEiCSUdhVGp3ZzVZZ3c'
+    },
+
+    // ── 平面 / 汽車 ───────────────────────────────
+    {
+      type: 'print',
+      brand: 'SUBARU Forester',
+      title: '品牌形象系列廣告',
+      category: '汽車',
+      imgId: '0B1KFG_gazEiCak9Gbkp6SU51ejQ',
+      desc: '以「血液」、「車距」等感性隱喻，重新定義 SUBARU 的品牌個性。強調冒險 DNA，讓每一張廣告都成為自由探索的宣言。',
+      link: 'https://drive.google.com/file/d/0B1KFG_gazEiCak9Gbkp6SU51ejQ/view'
+    },
+    // ── 平面 / 美妝 ───────────────────────────────
+    {
+      type: 'print',
+      brand: 'Kanebo 媚點',
+      title: '陳綺貞代言 粉餅 × BBCC霜 系列',
+      category: '美妝保養',
+      imgId: '1i9F6MeHjcDvKZ6tM3XsLprPBXQDzwDHG',
+      desc: '以清新自然的調性配合陳綺貞的藝文氣質，建立「自然好臉色」的品牌記憶。文案以詩意語言呈現產品的輕盈感，打破美妝廣告慣用的強調式表現。',
+      link: 'https://drive.google.com/file/d/1i9F6MeHjcDvKZ6tM3XsLprPBXQDzwDHG/view'
+    },
+    {
+      type: 'print',
+      brand: 'LUDEYA 微針生物面膜',
+      title: 'Selina 代言平面廣告',
+      category: '美妝保養',
+      imgId: '1-7a4Z5rpuWAd56vZ9xyjtRmNPm7ovlTR',
+      desc: '讓艱澀的「一億七千萬微針」科技訴求，轉化為消費者易懂且有感的品牌語言。以情感文案拉近科技感與消費者日常生活的距離。',
+      link: 'https://drive.google.com/file/d/1-7a4Z5rpuWAd56vZ9xyjtRmNPm7ovlTR/view'
+    },
+
+    // ── 平面 / 金融 ───────────────────────────────
+    {
+      type: 'print',
+      brand: '安泰投信 ING',
+      title: '辣椒篇 — ING(L)環球高收益基金',
+      category: '金融理財',
+      imgId: '1AtsL5lYA5t1liFZIHmgNk0M5reMJKmAX',
+      desc: '「過度刺激的年代，投資更需要單純的美好。」以辣椒的視覺反差傳遞品牌訴求，在高度理性的金融廣告品類中，創造兼具趣味與說服力的記憶點。',
+      link: 'https://drive.google.com/file/d/1AtsL5lYA5t1liFZIHmgNk0M5reMJKmAX/view'
+    },
+    {
+      type: 'print',
+      brand: '安泰投信 ING',
+      title: '橘子篇 — ING(L)亞洲債券基金',
+      category: '金融理財',
+      imgId: '11fxI-cZ9sYUIeb8JOOx50cs5bCCIzD6F',
+      desc: '「投資不能看天吃飯，豐收亞債正是時候！」以橘子豐收意象傳達亞洲債券基金的成長訴求，清新視覺創意在嚴肅金融廣告中帶來難得的親切感與記憶點。',
+      link: 'https://drive.google.com/file/d/11fxI-cZ9sYUIeb8JOOx50cs5bCCIzD6F/view'
+    },
+
+    // ── 平面 / 美妝 追加 ─────────────────────────
+    {
+      type: 'print',
+      brand: 'SEXYLOOK 面膜',
+      title: '純棉雙拉提面膜 棉花篇',
+      category: '美妝保養',
+      imgId: '1Od_cfE9mJLExOQwjkHG6fHZotsmaaaf_',
+      desc: '「臉部保養新觀念，要自然又Sexy。」以大膽的品牌個性打破保養品廣告的溫柔慣例，透過純棉觸感與性感訴求的強烈反差，讓 SEXYLOOK 在競爭激烈的美妝市場中瞬間出位。',
+      link: 'https://drive.google.com/file/d/1Od_cfE9mJLExOQwjkHG6fHZotsmaaaf_/view'
+    },
+    {
+      type: 'print',
+      brand: '牛爾 NARUKO',
+      title: '白玉蘭保濕系列 平面廣告',
+      category: '美妝保養',
+      imgId: '0B1KFG_gazEiCX0FCUktsX240LVE',
+      desc: '以「玉蘭花」天然植萃精神貫穿整個系列廣告，融合柔美東方美學視覺語言，詮釋牛爾 NARUKO 白玉蘭全系列——從乳液到精華，展現品牌一貫的自然美肌主張。',
+      link: 'https://drive.google.com/file/d/0B1KFG_gazEiCX0FCUktsX240LVE/view'
+    },
+
+    // ── 平面 / 其他 ───────────────────────────────
+    {
+      type: 'print',
+      brand: '痞客邦 PIXNET',
+      title: '出路篇 品牌形象廣告',
+      category: '數位平台',
+      imgId: '0B1KFG_gazEiCZEM4S0tXbEh3ZDA',
+      desc: '在數位媒體快速崛起的時代，以「出路」為核心創意，鼓勵每一位創作者勇於表達自我。廣告傳遞平台的人文溫度，建立情感認同。',
+      link: 'https://drive.google.com/file/d/0B1KFG_gazEiCZEM4S0tXbEh3ZDA/view'
+    },
+
+    // ── TVC ───────────────────────────────────────
+    {
+      type: 'tvc',
+      featured: true,
+      brand: 'Kanebo 媚點 玻璃篇',
+      title: '形象電視廣告 30s / 15s',
+      category: '美妝保養',
+      videoUrl: 'https://drive.google.com/file/d/1qpvTQPpweOEeUWfv-JRIOQwYGkQj8ir5/view',
+      gradientClass: 'grad-kanebo',
+      desc: '突破傳統美妝廣告手法，以「玻璃」作為視覺隱喻，詮釋媚點彩妝的通透感與光澤感，創造令人過目難忘的品牌視覺語言。榮獲廣告圈廣泛矚目討論。'
+    },
+    {
+      type: 'tvc',
+      brand: 'Kanebo 媚點 微笑篇',
+      title: '形象電視廣告 20s',
+      category: '美妝保養',
+      videoUrl: 'https://youtu.be/6BDW6JhlwH4',
+      gradientClass: 'grad-kanebo',
+      desc: '以女性最真實的「微笑」時刻為創意核心，捕捉日常生活中的動人情感，讓 Kanebo 媚點的品牌溫度深入人心。'
+    },
+    {
+      type: 'tvc',
+      brand: 'Kanebo 媚點 畫像篇',
+      title: '唇膏電視廣告 20s',
+      category: '美妝保養',
+      videoUrl: 'https://youtu.be/57ea_aF0w0Q',
+      gradientClass: 'grad-kanebo',
+      desc: '以藝術「畫像」的概念呈現唇膏的色彩魅力。精緻的視覺語言配合優雅的品牌敘事，詮釋媚點彩妝系列的高質感主張。'
+    },
+    {
+      type: 'tvc',
+      brand: 'Kanebo 媚點 甜美篇',
+      title: '水灩光唇膏電視廣告 20s',
+      category: '美妝保養',
+      videoUrl: 'https://drive.google.com/file/d/1XJVTi324O3DiLTQ19wiCeWyYSIMMxPVw/view',
+      gradientClass: 'grad-kanebo',
+      desc: '水灩光唇膏形象廣告，以「甜美」為創意核心，捕捉女性最迷人的唇妝時刻。輕盈流動的視覺敘事與媚點一貫的精緻品牌調性完美融合，展現潤澤光感的產品魅力。'
+    },
+    {
+      type: 'tvc',
+      brand: 'Kanebo 媚點 長廊篇',
+      title: '形象電視廣告',
+      category: '美妝保養',
+      videoUrl: 'https://drive.google.com/file/d/1QJMCp6EvWcMkEfnU9Dm2AheGPQ4xdHDC/view',
+      gradientClass: 'grad-kanebo',
+      desc: '以「長廊」作為視覺舞台，打造如電影般的品牌形象廣告。流動的空間感配合媚點的彩妝魅力，傳遞品牌高端優雅的整體形象主張，成為系列廣告中視覺張力最強的一支。'
+    },
+    {
+      type: 'tvc',
+      brand: '台灣大哥大 Jackpot篇',
+      title: '品牌電視廣告 30+10s',
+      category: '電信科技',
+      videoUrl: 'https://youtu.be/qA1lWwkkgj0',
+      gradientClass: 'grad-tmo',
+      desc: '以「Jackpot」為創意核心，傳遞品牌的驚喜與優惠感。節奏強烈的視覺配合精準的文案，引發廣大消費者共鳴，有效傳達品牌訊息。'
+    },
+    {
+      type: 'tvc',
+      brand: '淨脈舒 阿卡貝拉篇',
+      title: '醫療保健電視廣告',
+      category: '醫療保健',
+      videoUrl: 'https://youtu.be/e7AbG8ZYnEE',
+      gradientClass: 'grad-health',
+      desc: '突破醫療廣告的制式手法，以阿卡貝拉人聲演唱為創意切入，讓品牌訊息在輕鬆悅耳的形式下深入人心，兼顧創意性與訊息清晰度。'
+    },
+    {
+      type: 'tvc',
+      brand: '膳魔師 兩個世界篇',
+      title: '品牌電視廣告',
+      category: '生活用品',
+      videoUrl: 'https://youtu.be/d6MjULKzkQM',
+      gradientClass: 'grad-thermos',
+      desc: '以「兩個世界」的對比創意，詮釋膳魔師保溫杯的隔絕冷熱特性。在功能訴求之外，賦予品牌更深的生活哲學意涵，讓產品成為一種生活態度。'
+    },
+    {
+      type: 'tvc',
+      brand: '黑松 FIN 變聲篇',
+      title: '楊一展代言電視廣告',
+      category: '飲料食品',
+      videoUrl: 'https://youtu.be/rBaVoDYILZA',
+      gradientClass: 'grad-fin',
+      desc: '以幽默的「變聲」創意精準切入年輕族群，將飲料功能性訴求轉化為有趣的品牌故事。輕鬆的表現形式讓品牌訊息在目標族群中廣泛流傳。'
+    },
+    {
+      type: 'tvc',
+      brand: 'Victoria 牛仔褲',
+      title: '楊謹華代言 放寬篇',
+      category: '時尚服飾',
+      videoUrl: 'https://youtu.be/kRFfJX6nV74',
+      gradientClass: 'grad-victoria',
+      desc: '以楊謹華展現「放寬」的品牌精神——不只是褲型的放寬，更是生活態度的自在從容。精準的明星形象運用，讓品牌個性透過代言人完美詮釋。'
+    },
+    {
+      type: 'tvc',
+      brand: '克萊斯勒汽車',
+      title: '巨星登場篇 × 美好旅程篇',
+      category: '汽車',
+      videoUrl: 'https://drive.google.com/file/d/1y3Afur5rIKVpsy17vkhxFgifDpR71mM5/view',
+      gradientClass: 'grad-auto',
+      desc: '以「巨星登場」的戲劇張力詮釋克萊斯勒的品牌氣度，用電影感的視覺語言和精準的文案節奏，讓每一輛汽車都成為舞台的主角。'
+    },
+    {
+      type: 'tvc',
+      brand: '亞培 恩美力',
+      title: '爸爸篇 × 媽媽篇',
+      category: '嬰幼兒',
+      videoUrl: 'https://drive.google.com/file/d/1UxtJQO8t5P_CNPgEELG_JlxEb3mdB9wb/view',
+      gradientClass: 'grad-abbott',
+      desc: '以真實父母情感為核心，打動每一位為孩子精心規劃的家長。溫暖的故事場景傳遞品牌承諾，是跨越時代的情感廣告經典。'
+    },
+    {
+      type: 'tvc',
+      brand: '建國百年 力拔山河篇',
+      title: '中華民國公益形象廣告',
+      category: '公益形象',
+      videoUrl: 'https://youtu.be/9jEOdnijTBU',
+      gradientClass: 'grad-gov',
+      desc: '以磅礡的「力拔山河」視覺意象，喚起台灣人共同的驕傲與向前的力量。跨越政治的情感共鳴，是極富張力的公益廣告創作。'
+    },
+    {
+      type: 'tvc',
+      brand: '卡迪那洋芋片 變身篇',
+      title: '炎亞綸代言電視廣告',
+      category: '飲料食品',
+      videoUrl: 'https://youtu.be/kK2l1PD2QSY',
+      gradientClass: 'grad-fin',
+      desc: '以炎亞綸的魅力配合「變身」的趣味創意，精準鎖定年輕消費族群。幽默輕快的表現讓零食品牌形象更具個性，有效提升品牌好感度。'
+    },
+    {
+      type: 'tvc',
+      brand: 'KIRIN 麒麟 BAR 啤酒',
+      title: 'Kiss篇 × 告白篇',
+      category: '飲料食品',
+      videoUrl: 'https://youtu.be/hJsfvCM-1hE',
+      gradientClass: 'grad-kirin',
+      desc: '以大膽輕鬆的年輕人戀愛情境呈現 KIRIN 麒麟啤酒的輕盈暢快感，打破啤酒廣告慣用的豪爽男性形象，創造嶄新的品牌年輕感與記憶點。'
+    },
+    {
+      type: 'tvc',
+      brand: '八八坑道 金門高粱酒',
+      title: '體驗單純篇',
+      category: '觀光地方品牌',
+      videoUrl: 'https://drive.google.com/file/d/1LD1DrbHCCPlRKpK9rq_77ZxdNmfOj5kw/view',
+      gradientClass: 'grad-gov',
+      desc: '以「體驗單純」為核心創意，喚起現代都市人對純粹旅行體驗的嚮往。跨越二十年，仍具感動力的地方品牌廣告，是職業生涯最早的代表作之一。'
+    },
+    {
+      type: 'tvc',
+      brand: 'CITIBANK 花旗銀行',
+      title: '對獎篇 × 捧花篇',
+      category: '金融理財',
+      videoUrl: 'https://youtu.be/viSCsAAIchA',
+      gradientClass: 'grad-citi',
+      desc: '以輕鬆幽默的生活情境詮釋花旗銀行的消費回饋服務。「對獎篇」用驚喜感傳遞獎勵概念，「捧花篇」以浪漫生活場景強化品牌溫度，讓金融廣告更有人情味，有效拉近品牌與消費者的距離。'
+    },
+    {
+      type: 'tvc',
+      brand: '牛爾 NARUKO 白玉蘭',
+      title: '品牌電視廣告',
+      category: '美妝保養',
+      videoUrl: 'https://youtu.be/phm0HODJt4Q',
+      gradientClass: 'grad-naruko',
+      desc: '將牛爾白玉蘭系列的自然植萃概念搬上螢光幕，以柔美視覺敘事與感性文案，讓消費者在廣告中感受白玉蘭的清透保濕魅力，與平面廣告形成完整的整合行銷溝通。'
+    },
+
+    // ── 紀錄片 ────────────────────────────────────
+    {
+      type: 'documentary',
+      featured: true,
+      brand: '攜手共創 航向未來',
+      title: '帆船教育紀錄片',
+      category: '教育紀錄',
+      videoUrl: 'https://youtu.be/dDzdEdVgeO0',
+      gradientClass: 'grad-doc-sea',
+      desc: '記錄岳明國中小學生駕馭帆船、航向未來的成長旅程。以大海為課堂，以帆船為師，見證孩子們在風浪中磨礪意志、超越自我的動人故事。'
+    },
+    {
+      type: 'documentary',
+      brand: '孩子們的有機課',
+      title: '農耕教育紀錄片',
+      category: '教育紀錄',
+      videoUrl: 'https://youtu.be/1xx31aeJLDM',
+      gradientClass: 'grad-doc-farm',
+      desc: '帶領孩子走進田野，體驗有機農耕的生命教育。從播種到收穫，記錄孩子們與土地的深刻連結，探索在自然中學習的無限可能。'
+    },
+    {
+      type: 'documentary',
+      brand: '岳明國小 樂觀小帆手',
+      title: '帆船少年成長紀錄',
+      category: '教育紀錄',
+      videoUrl: 'https://youtu.be/Pydpq8HXP4U',
+      gradientClass: 'grad-doc-sea',
+      desc: '宜蘭岳明國小帆船隊的故事——一群在太平洋邊長大的孩子，透過帆船運動學習勇氣、團隊與樂觀面對生命的態度。'
+    },
+
+    // ── 活動企劃 ──────────────────────────────────
+    {
+      type: 'event',
+      featured: true,
+      brand: '中華賓士 F1 直播活動',
+      title: '品牌體驗活動整合規劃',
+      category: '汽車',
+      imgId: '0B1KFG_gazEiCcDlqV1R6S0JTajg',
+      desc: '為中華賓士策劃的 Formula 1 台灣直播活動整合方案。從視覺識別設計到現場體驗規劃，全面呼應賓士品牌的高端運動精神，創造消費者難忘的品牌沉浸體驗。活動串聯線上線下，有效強化賓士在台灣頂級消費族群中的品牌認知。',
+      link: 'https://drive.google.com/drive/folders/0B1KFG_gazEiCVm5SZlVJYS1vcHM'
+    },
+  ];
+
+  // ─── 漸層背景設定（TVC 類無圖片時使用）───────────────────
+  const gradients = {
+    'grad-kanebo':  'linear-gradient(135deg, #1a0f1e 0%, #2d1535 50%, #1a0e28 100%)',
+    'grad-tmo':     'linear-gradient(135deg, #0d1a0d 0%, #0e2310 50%, #0a180a 100%)',
+    'grad-health':  'linear-gradient(135deg, #0a1620 0%, #0e2233 50%, #091520 100%)',
+    'grad-thermos': 'linear-gradient(135deg, #1a1408 0%, #2a1e08 50%, #1a1306 100%)',
+    'grad-fin':     'linear-gradient(135deg, #100a08 0%, #1e100c 50%, #120b08 100%)',
+    'grad-victoria':'linear-gradient(135deg, #08100a 0%, #0c1a10 50%, #081008 100%)',
+    'grad-auto':    'linear-gradient(135deg, #0e0e14 0%, #141428 50%, #0c0c18 100%)',
+    'grad-abbott':  'linear-gradient(135deg, #081214 0%, #0c1e22 50%, #081012 100%)',
+    'grad-gov':     'linear-gradient(135deg, #140c0c 0%, #221010 50%, #140c0c 100%)',
+    'grad-kirin':   'linear-gradient(135deg, #0a1010 0%, #101e1a 50%, #0a1210 100%)',
+    'grad-citi':    'linear-gradient(135deg, #060c1c 0%, #0a1630 50%, #06101e 100%)',
+    'grad-naruko':     'linear-gradient(135deg, #180d14 0%, #2a1522 50%, #160c12 100%)',
+    'grad-doc-sea':    'linear-gradient(135deg, #041018 0%, #062040 50%, #041830 100%)',
+    'grad-doc-farm':   'linear-gradient(135deg, #081408 0%, #122010 50%, #0a160a 100%)',
+    'grad-doc-waldorf':'linear-gradient(135deg, #18100a 0%, #2a1c0e 50%, #16100a 100%)',
+  };
+
+  // ─── 渲染作品卡 ───────────────────────────────────────────
+  function buildCard(work, i) {
+    const card = document.createElement('div');
+    card.className = 'work-card reveal' + (work.featured ? ' featured' : '');
+    card.setAttribute('data-type', work.type);
+
+    // --- 縮圖區 ---
+    let thumbHtml = '';
+    if (work.type === 'tvc' || work.type === 'documentary') {
+      const bg = gradients[work.gradientClass] || 'linear-gradient(135deg, #111 0%, #1a1a1a 100%)';
+      // 只從真正的 YouTube 網址提取影片 ID
+      var ytId = '';
+      if (work.videoUrl && work.videoUrl.indexOf('youtu.be/') !== -1) {
+        ytId = work.videoUrl.split('youtu.be/')[1].split('?')[0].split('&')[0];
+      } else if (work.videoUrl && work.videoUrl.indexOf('youtube.com/watch') !== -1) {
+        var m = work.videoUrl.match(/[?&]v=([A-Za-z0-9_-]{11})/);
+        if (m) ytId = m[1];
+      }
+      const thumbSrc = (ytId && ytId.length <= 12) ? 'https://img.youtube.com/vi/' + ytId + '/hqdefault.jpg' : '';
+      const thumbImg = thumbSrc ? '<img src="' + thumbSrc + '" alt="' + work.brand + '" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">' : '';
+      const phStyle = 'background:' + bg + (thumbSrc ? ';display:none' : '');
+      thumbHtml = `
+        <div class="card-thumb">
+          ${thumbImg}
+          <div class="card-thumb-placeholder" style="${phStyle}">
+            <span class="brand-initial">${work.brand.charAt(0)}</span>
+          </div>
+          <div class="card-overlay">
+            <div class="card-overlay-desc">${work.desc}</div>
+          </div>
+          <a href="${work.videoUrl}" target="_blank" rel="noopener" class="card-play-btn" title="觀看影片">
+            <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+          </a>
+        </div>`;
+    } else if (work.imgId) {
+      const imgSrc = 'https://drive.google.com/thumbnail?id=' + work.imgId + '&sz=w800';
+      const printBg = gradients[work.gradientClass] || 'linear-gradient(135deg, #111 0%, #1a1a1a 100%)';
+      const printFallback = 'this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'';
+      thumbHtml = `
+        <div class="card-thumb">
+          <img src="${imgSrc}" alt="${work.brand} ${work.title}" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" onerror="${printFallback}">
+          <div class="card-thumb-placeholder" style="background:${printBg};display:none">
+            <span class="brand-initial">${work.brand.charAt(0)}</span>
+          </div>
+          <div class="card-overlay">
+            <div class="card-overlay-desc">${work.desc}</div>
+          </div>
+        </div>`;
+    }
+
+    // --- 標籤 ---
+    const typeLabel = { print: '平面廣告', tvc: '電視廣告', event: '活動企劃', documentary: '紀錄片' }[work.type];
+    const typeClass  = { print: 'tag-print', tvc: 'tag-tvc', event: 'tag-event', documentary: 'tag-doc' }[work.type];
+    const linkTarget = work.videoUrl || work.link || '#';
+    const linkText   = (work.type === 'tvc' || work.type === 'documentary') ? '觀看影片' : '查看原稿';
+
+    card.innerHTML = `
+      ${thumbHtml}
+      <div class="card-body">
+        <div class="card-tags">
+          <span class="card-tag ${typeClass}">${typeLabel}</span>
+          <span class="card-tag tag-category">${work.category}</span>
+        </div>
+        <div class="card-brand">${work.brand}</div>
+        <div class="card-title">${work.title}</div>
+        <div class="card-desc">${work.desc}</div>
+        <div class="card-footer">
+<a href="${linkTarget}" target="_blank" rel="noopener" class="card-link">
+            ${linkText}
+            <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
+      </div>`;
+
+    return card;
+  }
+
+  // ─── 渲染作品 ────────────────────────────────────────────
+  function renderWorks(filter) {
+    const grid = document.getElementById('works-grid');
+    grid.innerHTML = '';
+    let count = 0;
+    works.forEach(function(w) {
+      if (filter === 'all' || w.type === filter) {
+        const card = buildCard(w, count);
+        card.classList.add('visible');   // 立刻顯示，不等 observer
+        grid.appendChild(card);
+        count++;
+      }
+    });
+    document.getElementById('works-count').textContent = '顯示 ' + count + ' 件作品';
+  }
+
+  // ─── 篩選器 ──────────────────────────────────────────────
+  document.querySelectorAll('.filter-btn').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      document.querySelectorAll('.filter-btn').forEach(function(b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      renderWorks(btn.dataset.filter);
+    });
+  });
+
+  // ─── 靜態 reveal 元素：100ms 後全部顯示 ─────────────────
+  setTimeout(function() {
+    document.querySelectorAll('.reveal').forEach(function(el) {
+      el.classList.add('visible');
+    });
+  }, 100);
+
+  // ─── 滾動淡入（捲動進入畫面時顯示） ────────────────────
+  if (typeof IntersectionObserver !== 'undefined') {
+    var revealObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          revealObserver.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.reveal').forEach(function(el) {
+      revealObserver.observe(el);
+    });
+  }
+
+  // ─── 導覽列滾動效果 ──────────────────────────────────────
+  var navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', function() {
+    navbar.classList.toggle('scrolled', window.scrollY > 60);
+  });
+
+  // ─── 手機選單（簡易版） ───────────────────────────────────
+  function toggleMenu() {}
+
+  // ─── 初始化 ──────────────────────────────────────────────
+  renderWorks('all');
+
+  </script>
+
+  <style>
+  /* 額外補充：確保 TVC 卡片 overlay desc 不擋 play btn */
+  .card-play-btn { z-index: 2; }
+  .card-overlay  { z-index: 1; }
+  /* 圖片失敗時顯示漸層背景 */
+  .card-thumb img { background: #111; }
+  </style>
+
+</body>
+</html>
