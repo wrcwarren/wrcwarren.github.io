@@ -810,6 +810,7 @@
       title: '水灩光唇膏電視廣告 20s',
       category: '美妝保養',
       videoUrl: 'https://drive.google.com/file/d/1XJVTi324O3DiLTQ19wiCeWyYSIMMxPVw/view',
+      thumbId: '1fueqLs49WWsGQA0Ebbwt4GBOYyvnXsB2',
       gradientClass: 'grad-kanebo',
       desc: '水灩光唇膏形象廣告，以「甜美」為創意核心，捕捉女性最迷人的唇妝時刻。輕盈流動的視覺敘事與媚點一貫的精緻品牌調性完美融合，展現潤澤光感的產品魅力。'
     },
@@ -1024,6 +1025,7 @@
        if (!ytId && work.videoUrl && work.videoUrl.indexOf('drive.google.com/file/d/') !== -1) {
          driveId = work.videoUrl.split('/file/d/')[1].split('/')[0].split('?')[0];
        }
+       if (work.thumbId) driveId = work.thumbId;
        const thumbSrc = (ytId && ytId.length <= 12) ? 'https://img.youtube.com/vi/' + ytId + '/hqdefault.jpg'
          : (driveId ? 'https://drive.google.com/thumbnail?id=' + driveId + '&sz=w800' : '');
       const thumbImg = thumbSrc ? '<img src="' + thumbSrc + '" alt="' + work.brand + '" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">' : '';
